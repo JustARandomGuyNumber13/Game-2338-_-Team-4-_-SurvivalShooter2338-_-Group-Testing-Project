@@ -13,7 +13,7 @@ public class PauseHandler : MonoBehaviour
             // if pause menu is open, pressing pause button means we want to unpause
             if(SceneManager.GetSceneByName("Pause").isLoaded)
             {
-                PauseGame();
+                UnpauseGame();
             }
             // if pause menu is not open, pressing pause button means we want to pause
             else

@@ -14,7 +14,6 @@ public class PlayerHealth : MonoBehaviour
     public float flashSpeed = 5f;
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
 
-
     Animator anim;
     AudioSource playerAudio;
     PlayerMovement playerMovement;
@@ -31,7 +30,6 @@ public class PlayerHealth : MonoBehaviour
         playerShooting = GetComponentInChildren <PlayerShooting> ();
         currentHealth = startingHealth;
     }
-
 
     void Update ()
     {
@@ -75,6 +73,9 @@ public class PlayerHealth : MonoBehaviour
         playerAudio.clip = deathClip;
         playerAudio.Play ();
 
+        if (GameObject.Find("BackgroundMusic") != null)///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            DestroyImmediate(GameObject.Find("BackgroundMusic"));
+        
         playerShooting.enabled = false;
     }
 }

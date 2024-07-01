@@ -31,4 +31,10 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1;
     }
+    public void ReturnToTitle()////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    {
+        if (GameObject.Find("BackgroundMusic") != null)
+            DestroyImmediate(GameObject.Find("BackgroundMusic"));
+        SceneManager.LoadScene(0);
+    }
 }

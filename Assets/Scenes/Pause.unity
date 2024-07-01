@@ -1052,7 +1052,7 @@ GameObject:
   - component: {fileID: 1829316691}
   - component: {fileID: 1829316690}
   m_Layer: 5
-  m_Name: Btn Quit
+  m_Name: Btn Return_To_Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1124,7 +1124,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1008915061}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: QuitGame
+        m_MethodName: ReturnToTitle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1229,7 +1229,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit
+  m_text: 'Return to Title
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2c3bf3ef435778342bc3a489e3dc93bd, type: 2}
   m_sharedMaterial: {fileID: -6312028926460076030, guid: 2c3bf3ef435778342bc3a489e3dc93bd,

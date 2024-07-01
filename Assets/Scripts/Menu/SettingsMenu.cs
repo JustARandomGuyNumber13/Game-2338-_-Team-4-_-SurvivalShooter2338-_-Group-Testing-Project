@@ -22,11 +22,14 @@ public class SettingsMenu : MonoBehaviour
     {
         // create list of resolutions
         allResolutions = new List<Resolution>();
+        allResolutions.Add(new Resolution(512, 512));
+        allResolutions.Add(new Resolution(640, 360));
         allResolutions.Add(new Resolution(640, 480));
         allResolutions.Add(new Resolution(1024, 1024));
         allResolutions.Add(new Resolution(1280, 720));
         allResolutions.Add(new Resolution(1366, 768));
         allResolutions.Add(new Resolution(1920, 1080));
+        allResolutions.Add(new Resolution(3840, 2160));
 
         // add resolutions to dropdown
         FillResolutions();

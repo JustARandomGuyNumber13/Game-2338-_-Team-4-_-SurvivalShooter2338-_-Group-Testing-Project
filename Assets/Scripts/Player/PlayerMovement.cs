@@ -10,21 +10,27 @@ public class PlayerMovement : MonoBehaviour
 	private int floorMask;
 	private float camRayLength = 100f;
 
+	private PlayerHealth playerHealth;//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 	void Awake()
 	{
 		floorMask = LayerMask.GetMask("Floor");
 		anim = GetComponent<Animator>();
 		playerRigidbody = GetComponent<Rigidbody>();
-	}
+        playerHealth = GetComponent<PlayerHealth>();/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    }
 
 	void FixedUpdate()
 	{
 		float h = Input.GetAxisRaw("Horizontal");
 		float v = Input.GetAxisRaw("Vertical");
 
-		Move(h, v);
-		Turning();
-		Animating(h, v);
+		if (playerHealth.currentHealth > 0)/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        {
+			Move(h, v);
+			Turning();
+			Animating(h, v);
+		}
 	}
 
 	void Move(float h, float v)

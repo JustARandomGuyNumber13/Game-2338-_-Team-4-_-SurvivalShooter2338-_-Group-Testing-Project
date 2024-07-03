@@ -109,14 +109,23 @@ public class SettingsMenu : MonoBehaviour
         Screen.fullScreen = fullscreenToggle.isOn;
     }
 
-    public void UpdateSFXVolume(float val) // change volume of sound effects, called when slider is adjusted
+    //public void UpdateSFXVolume(float val) // change volume of sound effects, called when slider is adjusted
+    //{
+    //    masterMixer.SetFloat("sfxVol", val);
+    //}
+
+    //public void UpdateBGMVolume(float val) // change volume of music, called when slider is adjusted
+    //{
+    //    masterMixer.SetFloat("musicVol", val);
+    //}
+    public void UpdateSFXVolume() // change volume of sound effects, called when slider is adjusted
     {
-        masterMixer.SetFloat("sfxVol", val);
+        masterMixer.SetFloat("sfxVol", sfxSlider.value);
     }
 
-    public void UpdateBGMVolume(float val) // change volume of music, called when slider is adjusted
+    public void UpdateBGMVolume() // change volume of music, called when slider is adjusted
     {
-        masterMixer.SetFloat("musicVol", val);
+        masterMixer.SetFloat("musicVol", bgmSlider.value);
     }
 
     public void Cancel() // cancel settings menu, called when back button is clicked
